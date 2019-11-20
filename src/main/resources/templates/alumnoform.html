@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<title>Alta de Alumnos</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="css/form.css">
+</head>
+<body>
+	<div class="seccion">
+		<img src="img/logoCapgemini.png">
+		<h1>Alta De Alumno</h1>
+			<form th:action="@{/altaalumno}" th:object="${alumno}"
+				method="post">
+				<label for="nombre">Nombre:</label>
+					<input type="text" placeholder="Ingresar nombre" th:field="*{nombre}" required/>
+				<label for="apellido">Apellido:</label>
+					<input type="text" placeholder="Ingresar apellido" th:field="*{apellido}" required/>
+				<label for="dni">DNI:</label>
+					<input type="number" placeholder="Ingresar DNI" id="dni" th:field="*{dni}" />
+				<label for="Email">Email</label>
+					<input type="text" placeholder="Ingresar Email" th:field="*{mail}" required/>
+				<label for="telefono">Telefono:</label>
+					<input type="number" placeholder="Ingresar telefono" id="telefono" th:field="*{telefono}" />
+				<br><br>
+					<input class="boton" type="submit" value="Submit" /> <input class="boton" type="reset" value="Reset" />
+			</form>
+	</div>
+</body>
+</html>

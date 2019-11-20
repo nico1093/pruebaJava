@@ -1,0 +1,16 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<title>Curso Recomendado</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body>
+	<div class="seccion">
+		<img src="img/logoCapgemini.png">
+		<h2>Busqueda Existosa</h2>
+		<p th:text="'Tu curso recomendado es: ' + ${tema.curso.getNombre_Curso()}" />
+		<a href="/buscarcurso">Buscar nuevo curso.</a>
+	</div>	
+</body>
+</html>

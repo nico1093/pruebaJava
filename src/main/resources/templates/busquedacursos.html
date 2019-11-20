@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<title>Busqueda de cursos</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="css/form.css">
+</head>
+<body>
+	<div class="seccion">
+		<img src="img/logoCapgemini.png">
+		<form action="#" th:action="@{/buscarcurso}" th:object="${tema}" method="post">
+			<label>Elija su curso de interes</label>	
+			<select th:field="*{idTemas}">
+				<option th:each="tema:${listaTemas}" th:value="${tema.idTemas}"th:utext="${tema.nombre}"></option>
+			</select>
+			<br><br>
+			<input class="boton" type="submit" value="Enviar" />
+		</form>
+	</div>
+</body>
+</html>

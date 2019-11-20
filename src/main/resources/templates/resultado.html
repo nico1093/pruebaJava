@@ -1,0 +1,20 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Getting Started: Handling Form Submission</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body>
+	<div class="seccion">
+		<img src="img/logoCapgemini.png">
+		<h1>Result</h1>
+		<p th:text="'id: ' + ${alumno.id_Alumno}" />
+		<p th:text="'el alumno: ' + ${alumno.apellido} + ', ' + ${alumno.nombre}" />
+		<p th:text="'DNI: ' + ${alumno.dni}" />
+		<p th:text="'E-mail: ' + ${alumno.mail}" />
+		<p th:text="'Telefono: ' + ${alumno.telefono}" />
+		<a href="/altaalumno">Agregar nuevo Alumno.</a>
+	</div>
+	</body>
+</html>
